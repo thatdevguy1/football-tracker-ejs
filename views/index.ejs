@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <form action="/setPlayer" method="POST">
+      <label for="firstName">First Name</label>
+      <input name="firstName" type="text" />
+      <br />
+      <label for="lastName">Last Name</label>
+      <input name="lastName" type="text" />
+      <br />
+      <label for="number">Number</label>
+      <input name="number" type="text" />
+      <br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

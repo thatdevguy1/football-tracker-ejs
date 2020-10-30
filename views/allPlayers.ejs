@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <% players.map((player) => { %>
+    <ul>
+      <li><%= player.id %></li>
+      <li><%= player.firstName %></li>
+      <li><%= player.lastName %></li>
+      <li><%= player.number%></li>
+    </ul>
+    <form action="<%= `/deletePlayer/${player.id}` %>" method="POST">
+      <input type="submit" />
+    </form>
+    <% })%>
+
+    <br />
+    <form action="/makeTeam" method="POST">
+      <label for="teamName">Team name</label>
+      <input name="teamName" type="text" />
+      <br />
+      <label for="player">Player on team</label>
+      <input name="player" type="text" />
+      <br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
